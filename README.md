@@ -1,5 +1,5 @@
 # jira-api-user-export
-User export of your Atlassian system through a simple API call.
+User export to CSV of your Atlassian system through a simple API call.
 
 Change the values of `JIRA_ENDPOINT_BASE` with your domain name.
 
