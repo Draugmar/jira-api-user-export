@@ -37,12 +37,12 @@ while True:
             users[aid] = chunk
 
 f = open('jiraBulk.csv', 'w', encoding="UTF8")
-writer = csv.writer(f)
+writer = csv.writer(f, ',', csv.QUOTE_MINIMAL)
 
 for user in users.values():
-    name = user.get("displayName", "Username not found")
-    id = user.get("accountId", "Account Id not found")
-    email = user.get("emailAddress", "Mail address not found")
+    name = user.get("displayName", None)
+    id = user.get("accountId", None)
+    email = user.get("emailAddress", None)
     writer.writerow([name, id, email])
 
 f.close()
