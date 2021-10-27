@@ -37,7 +37,7 @@ while True:
             users[aid] = chunk
 
 f = open('jiraBulk.csv', 'w', encoding="UTF8")
-writer = csv.writer(f, ',', csv.QUOTE_MINIMAL)
+writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
 for user in users.values():
     name = user.get("displayName", None)
